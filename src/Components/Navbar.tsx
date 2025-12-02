@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useState, useEffect } from "react";
 
@@ -20,7 +20,7 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
